@@ -47,7 +47,12 @@ function newNonPlayableCharacter(x, y) {
         direction = null
         element.src = `./assets/red-character/static.gif`
     }
-
+    function sleep(time){
+        return new Promise(resolve => {
+            setTimeout(resolve, time)
+        })  
+    }
+    
     return {
         element: element,
         walkWest: walkWest,
